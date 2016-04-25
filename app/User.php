@@ -80,7 +80,7 @@ class User extends Authenticatable
         return $this->hasManyThrough(WishListItem::class, WishList::class);
     }
 
-    public function createWishList(array $wishListParam):WishList
+    public function createWishList(array $wishListParam)
     {
         return $this->wishLists()->create($wishListParam);
     }
