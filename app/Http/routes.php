@@ -21,9 +21,10 @@ use App\Services\ReservationService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-dd('right here');
 
 Route::get('/', function () {
+    dd('right here');
+
     return view('welcome');
 });
 
