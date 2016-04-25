@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAME,gCAAI;EACF,UAAU,ECLA,OAAO;EDMjB,WAAW,EANW,IAAI;EAO1B,cAAc,EAPQ,IAAI;EAQ1B,aAAa,EAAE,kBAAqC;EAGpD,UAAU,EAAE,MAAM",
+"sources": ["indexPage.sass","../../style/variables.sass"],
+"names": [],
+"file": "indexPage.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,gBAAgB;EACd,gBAAgB,ECDJ,OAAO;EDEnB,KAAK,EAAE,KAAK;EAEZ,kBAAC;IACC,KAAK,EAAE,KAAK;EAEd,yBAAQ;IACN,SAAS,EAAE,KAAK;IAChB,OAAO,EAAE,YAAY;IACrB,aAAa,EAAE,iBAAsB;EACvC,mBAAE;IACA,SAAS,EAAE,KAAK",
+"sources": ["frontEndFooter.sass","../../style/variables.sass"],
+"names": [],
+"file": "frontEndFooter.css"
+}

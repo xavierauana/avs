@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,MAAM;EACJ,gBAAgB,ECLP,GAAG;EDOZ,iBAAU;IACR,aAAa,EAAE,CAAC;IAEhB,mBAAC;MACC,KAAK,EAAE,KAAK;IACd,yBAAO;MACL,KAAK,EAAE,IAAI;EAEf,+BAAwB;IACtB,QAAQ,EAAE,QAAQ;IAClB,GAAG,EAfQ,IAAI",
+"sources": ["frontEndHeader.sass","../../style/variables.sass"],
+"names": [],
+"file": "frontEndHeader.css"
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,gBAAgB;EACd,UAAU,EAAE,IAAI;EAChB,qBAAI;IACF,aAAa,EAAE,IAAI;EACrB,gCAAe;IACb,aAAa,EAAE,CAAC;EAElB,mBAAE;IACA,UAAU,EAAE,OAAkB;IAC9B,QAAQ,EAAE,QAAQ;IAClB,OAAO,EAAE,IAAI;IACb,MAAM,EAAE,CAAC;IACT,IAAI,EAAE,IAAI;IACV,KAAK,EAAE,KAAK",
+"sources": ["indexPromotions.sass"],
+"names": [],
+"file": "indexPromotions.css"
+}

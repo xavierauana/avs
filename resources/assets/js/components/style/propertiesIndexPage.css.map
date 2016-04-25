@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,kBAAkB;EAChB,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,GAAG;;AAElB,iBAAiB;EACf,OAAO,EAAE,YAAY;EACrB,UAAU,EAAE,GAAG;EACf,UAAU,EAAE,IAAI",
+"sources": ["propertiesIndexPage.sass"],
+"names": [],
+"file": "propertiesIndexPage.css"
+}

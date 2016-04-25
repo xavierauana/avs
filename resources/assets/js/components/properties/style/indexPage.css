@@ -1,0 +1,24 @@
+ul.property-listing {
+  list-style: none; }
+  ul.property-listing li.property {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b3b3b3;
+    margin-left: 15px;
+    margin-right: 15px; }
+    ul.property-listing li.property li.property-name a {
+      color: black;
+      font-size: 1.2em;
+      font-weight: 600; }
+  ul.property-listing li.property:first-child {
+    padding-top: 0; }
+
+div.img-container {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  background-color: grey; }
+  div.img-container img {
+    vertical-align: middle; }
+
+/*# sourceMappingURL=indexPage.css.map */

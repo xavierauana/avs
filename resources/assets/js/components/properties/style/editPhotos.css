@@ -1,0 +1,17 @@
+div.image-card {
+  text-align: center;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  height: 255px;
+  border: 1px solid #e6e6e6; }
+  div.image-card div.add-card-text {
+    padding-top: 10px;
+    color: red;
+    font-size: 1.3em; }
+  div.image-card.add-new-photo {
+    padding-top: 91.07143px;
+    cursor: pointer; }
+
+div.image-card:hover {
+  border: 1px solid grey; }
+
+/*# sourceMappingURL=editPhotos.css.map */

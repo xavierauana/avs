@@ -1,0 +1,40 @@
+#house_detail {
+  background-color: white; }
+  #house_detail .page-title {
+    display: inline-block;
+    border-bottom: 3px solid #9A907E; }
+  #house_detail .icons-container p {
+    display: inline-block; }
+  #house_detail #property-address {
+    display: inline-block;
+    border-bottom: 1px solid #9A907E; }
+  #house_detail .icons-container {
+    margin-top: 15px;
+    display: block; }
+
+img.small-img {
+  margin-bottom: 15px; }
+
+img#property-preview {
+  max-height: 410px; }
+
+div#price {
+  border: 2px solid grey;
+  padding: 15px; }
+  div#price > p {
+    background: grey;
+    color: white;
+    font-size: 2em;
+    padding-top: 15px;
+    margin: -15px;
+    margin-bottom: 15px;
+    padding-right: 30px; }
+  div#price input {
+    border-radius: 0;
+    height: 40px;
+    border: 1px solid red;
+    margin-bottom: 5px; }
+  div#price button {
+    border-radius: 0; }
+
+/*# sourceMappingURL=detail.css.map */

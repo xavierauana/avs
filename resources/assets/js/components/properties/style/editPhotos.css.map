@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,cAAc;EACZ,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,kCAAkC;EAC9C,MAAM,EALU,KAAK;EAMrB,MAAM,EAAE,iBAA4B;EAEpC,gCAAiB;IACf,WAAW,EAAE,IAAI;IACjB,KAAK,ECZE,GAAG;IDaV,SAAS,EAAE,KAAK;EAElB,4BAAe;IACb,WAAW,EAbI,UAAoB;IAcnC,MAAM,EAAE,OAAO;;AAEnB,oBAAoB;EAClB,MAAM,EAAE,cAAc",
+"sources": ["editPhotos.sass","../../../style/variables.sass"],
+"names": [],
+"file": "editPhotos.css"
+}

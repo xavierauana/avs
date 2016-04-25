@@ -1,0 +1,13 @@
+header {
+  background-color: red; }
+  header nav.navbar {
+    margin-bottom: 0; }
+    header nav.navbar a {
+      color: white; }
+    header nav.navbar a:hover {
+      color: blue; }
+  header .second-navbar-container {
+    position: absolute;
+    top: 50px; }
+
+/*# sourceMappingURL=frontEndHeader.css.map */

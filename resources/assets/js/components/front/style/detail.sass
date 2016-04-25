@@ -1,0 +1,47 @@
+@import "../../../style/app"
+
+$pricingDivBackgroundColor: grey
+#house_detail
+  background-color: white
+
+  .page-title
+    display: inline-block
+    border-bottom: 3px solid $themeGolden
+
+  .icons-container p
+    display: inline-block
+
+  #property-address
+    display: inline-block
+    border-bottom: 1px solid $themeGolden
+
+  .icons-container
+    margin-top: 15px
+
+    i.fa
+    display: block
+
+img.small-img
+  margin-bottom: 15px
+img#property-preview
+  max-height: 410px
+
+div#price
+  border: 2px solid $pricingDivBackgroundColor
+  padding: 15px
+  &>p
+    background: $pricingDivBackgroundColor
+    color: white
+    font-size: 2em
+    padding-top: 15px
+    margin: -15px
+    margin-bottom: 15px
+    padding-right: 30px
+
+  input
+    border-radius: 0
+    height: 40px
+    border: 1px solid $themeRed
+    margin-bottom: 5px
+  button
+    border-radius: 0

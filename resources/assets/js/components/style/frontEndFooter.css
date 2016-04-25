@@ -1,0 +1,13 @@
+footer.container {
+  background-color: #800080;
+  color: white; }
+  footer.container a {
+    color: white; }
+  footer.container h5.title {
+    font-size: 1.2em;
+    display: inline-block;
+    border-bottom: solid 4px #9A907E; }
+  footer.container li {
+    font-size: 0.8em; }
+
+/*# sourceMappingURL=frontEndFooter.css.map */

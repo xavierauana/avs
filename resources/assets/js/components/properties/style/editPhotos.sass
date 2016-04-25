@@ -1,0 +1,21 @@
+@import "../../../style/app"
+
+$imageCardHeight: 255px
+$imageCardPadding: $imageCardHeight/2.8
+div.image-card
+  text-align: center
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1)
+  height: $imageCardHeight
+  border: 1px solid lighten(grey, 40%)
+
+  div.add-card-text
+    padding-top: 10px
+    color: $themeRed
+    font-size: 1.3em
+
+  &.add-new-photo
+    padding-top: $imageCardPadding
+    cursor: pointer
+
+div.image-card:hover
+  border: 1px solid grey
