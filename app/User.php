@@ -50,7 +50,7 @@ class User extends Authenticatable
         return $this->hasMany(Reservation::class);
     }
 
-    public function reserve(RoomType $roomType, int $occupancy, string $checkInDate, string $checkOutDate): Reservation
+    public function reserve(RoomType $roomType, int $occupancy, string $checkInDate, string $checkOutDate)
     {
         $reservation = new ReservationService();
         $reservation->make($this, $roomType, $occupancy, $checkInDate, $checkOutDate);

@@ -18,8 +18,6 @@ class CreatePropertiesTable extends Migration
             $table->text('description');
             $table->integer('property_type_id')->unsigned();
             $table->integer('owner_id')->unsigned();
-
-
             $table->foreign('property_type_id')->references('id')->on('property_types');
             $table->foreign('owner_id')->references('id')->on('users');
             $table->timestamps();
