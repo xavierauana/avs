@@ -23,7 +23,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    dd('right here');
 
     return view('welcome');
 });
@@ -38,108 +37,6 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
-function setUp()
-{
-//    $user = User::first()?? factory(User::class)->create();
-//    $permission = Permission::create([
-//        'label' => 'Can Has Multiple Room Type Property',
-//        'code'  => 'multiple',
-//    ]);
-//    $role = Role::create([
-//        'label' => 'Who can has multiple room type property',
-//        'code'  => 'multiple',
-//    ]);
-//
-//    $role->permissions()->save($permission);
-//    $user->roles()->save($role);
-//    if (count(User::all()) < 2) {
-//        factory(User::class)->create();
-//    }
-//    if (!Role::whereCode('dev')->first()) {
-//        $data = [
-//            'code'  => 'dev',
-//            'label' => 'Developer',
-//        ];
-//        Role::create($data);
-//    }
-
-    $developer = Role::whereCode('dev')->first();
-    $allPermissionIds = \App\Permission::lists('id')->toArray();
-    $developer->permissions()->sync($allPermissionIds);
-
-    if(!$developer->users->count()){
-        $data = [
-            'name'=>'Xavier Au',
-            'email'=>'xavier.au@anacreation.com',
-            'password'=>bcrypt('aukaiyuen')
-        ];
-        $developer->users()->create($data);
-    }
-
-    if (!RoomTypeList::first()) {
-        $array = [
-            ["label" => "Entire home/apt", "code" => 'entire', 'is_multiple' => 0],
-            ["label" => "Private Room", "code" => 'private', 'is_multiple' => 0],
-            ["label" => "Share Room", "code" => 'shared', 'is_multiple' => 0],
-            ["label" => "Standard Single Room", "code" => 'stn_single', 'is_multiple' => 1],
-            ["label" => "Standard Double Room", "code" => 'stn_double', 'is_multiple' => 1],
-            ["label" => "Deluxe Double Room", "code" => 'de_double', 'is_multiple' => 1],
-        ];
-
-        foreach ($array as $type) {
-            RoomTypeList::create($type);
-        }
-    };
-    if (!PropertyType::first()) {
-        $array = [
-            ["label" => "Apartment", "code" => 'apt', 'is_multiple' => 0],
-            ["label" => "House", "code" => 'hse', 'is_multiple' => 0],
-            ["label" => "Bread and Breakfast", "code" => 'b&b', 'is_multiple' => 0],
-            ["label" => "Other", "code" => 'others', 'is_multiple' => 0],
-            ["label" => "Hotel", "code" => 'hotel', 'is_multiple' => 1],
-        ];
-
-        foreach ($array as $type) {
-            PropertyType::create($type);
-        }
-    };
-    if (!Amenities::first()) {
-        $array = [
-            ["label" => "Essentials", "code" => 'essentials', 'category' => 'Common Amenities', 'is_room'=>0],
-            ["label" => "TV", "code" => 'tv', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "Cable TV", "code" => 'cable_tv', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "Air Conditioner", "code" => 'air_con', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "Heating", "code" => 'heating', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "Kitchen", "code" => 'kitchen', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "Internet", "code" => 'internet', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "Wireless Internet", "code" => 'wifi', 'category' => 'Common Amenities', 'is_room'=>1],
-            ["label" => "24-Hours Check-In", "code" => '24_check_in', 'category' => 'Common Amenities', 'is_room'=>0],
-            ["label" => "Hot Tub", "code" => 'hot_tub', 'category' => 'Additional Amenities', 'is_room'=>1],
-            ["label" => "Washer", "code" => 'washer', 'category' => 'Additional Amenities', 'is_room'=>1],
-            ["label" => "Pool", "code" => 'pool', 'category' => 'Additional Amenities', 'is_room'=>0],
-            ["label" => "Dryer", "code" => 'dryer', 'category' => 'Additional Amenities', 'is_room'=>1],
-            ["label" => "Breakfast", "code" => 'breakfast', 'category' => 'Additional Amenities', 'is_room'=>0],
-            ["label" => "Free Parking on Premises", "code" => 'free_parking', 'category' => 'Additional Amenities', 'is_room'=>0],
-            ["label" => "Gym", "code" => 'Gym', 'category' => 'Additional Amenities', 'is_room'=>0],
-            ["label" => "Elevator in Building", "code" => 'elevator', 'category' => 'Additional Amenities', 'is_room'=>0],
-            ["label" => "Indoor Fireplace", "code" => 'fireplace', 'category' => 'Additional Amenities', 'is_room'=>1],
-            ["label" => "Door Man", "code" => 'door_man', 'category' => 'Additional Amenities', 'is_room'=>0],
-            ["label" => "Family/Kid Friendly", "code" => 'family_friendly', 'category' => 'Special Features', 'is_room'=>0],
-            ["label" => "Smoking Allowed", "code" => 'can_smoke', 'category' => 'Special Features', 'is_room'=>1],
-            ["label" => "Pets Allowed", "code" => 'pet_allowed', 'category' => 'Special Features', 'is_room'=>1],
-            ["label" => "Pets live on this property", "code" => 'with_pets', 'category' => 'Special Features', 'is_room'=>0],
-            ["label" => "Wheelchair Accessible", "code" => 'wheelchair', 'category' => 'Special Features', 'is_room'=>0],
-        ];
-
-        foreach ($array as $type) {
-            Amenities::create($type);
-        }
-    };
-}
-
-setUp();
-
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('api/getReservations/{reservationId?}', function($reservationId=null){

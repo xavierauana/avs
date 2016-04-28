@@ -1,7 +1,7 @@
 <style></style>
 <template>
     <div class="item">
-        <img :src="item.src" alt="...">
+        <img class="img-responsive" :src="item.src" alt="...">
         <div class="carousel-caption">
             <h1 class="text-center"><span>{{item.title}}</span></h1>
             <p class="text-center"><span>{{item.description}}</span></p>
