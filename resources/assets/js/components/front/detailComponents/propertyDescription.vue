@@ -1,4 +1,7 @@
 <style>
+    div.propertyDescription{
+        overflow: hidden;
+    }
     div.coverDescription{
         height: 200px;
     }
@@ -9,7 +12,7 @@
 <template>
     <div class="description">
         About Room
-        <div :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
+        <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
         <div class="text-center" @click="wantTOShowMore = true" v-show="isTooMuch"> Show More </div>
     </div>
 </template>
