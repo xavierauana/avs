@@ -31,7 +31,7 @@
 <template>
     <div class="description">
         <h3>About The Property</h3>
-        <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}"
+        <div class="propertyDescription" :class="{'coverDescription':isTooMuch && !wantToShowMore, 'showMore':wantToShowMore}"
              v-html="description"></div>
         <button class=" btn btn-xs btn-block btn-info" @click="wantToShowMore = true"
                 v-show="isTooMuch && !wantToShowMore"> Show More
