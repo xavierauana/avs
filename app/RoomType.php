@@ -45,11 +45,6 @@ class RoomType extends Model
         return $this->hasMany(RoomCalendar::class, 'room_id');
     }
 
-    public function setDescriptionAttribute($value)
-    {
-        return $this->attributes['description'] = nl2br($value);
-    }
-
     public function isAvailableOnDateForOccupancy(string $date, int $occupancy)
     {
         $calendar = $this->calendar()->where('date',$date)->first();
