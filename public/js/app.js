@@ -60505,12 +60505,9 @@ exports.default = {
     },
     computed: {
         isTooMuch: function isTooMuch() {
-            if (this.propertyIsLoaded()) {
-                var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
-                if (numOfRow > 5 || this.descriptionHtml.length > 200) {
-                    return true;
-                }
-                return false;
+            var numOfRow = (this.description.match(/<br\/>|<br \/>/g) || []).length;
+            if (numOfRow > 5 || this.description.length > 200) {
+                return true;
             }
             return false;
         }
@@ -61488,12 +61485,9 @@ exports.default = {
             this.$dispatch('change-room-type', roomType);
         },
         isTooMuch: function isTooMuch(description) {
-            if (this.propertyIsLoaded()) {
-                var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
-                if (numOfRow > 3 || description.length > 100) {
-                    return true;
-                }
-                return false;
+            var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
+            if (numOfRow > 3 || description.length > 100) {
+                return true;
             }
             return false;
         }
@@ -62039,9 +62033,18 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _keys = require('babel-runtime/core-js/object/keys');
+
+var _keys2 = _interopRequireDefault(_keys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var moment = require('moment');
 
 exports.default = {
+    isObjectLoaded: function isObjectLoaded(object) {
+        return (0, _keys2.default)(object).length > 0;
+    },
     setAjaxHeaders: function setAjaxHeaders() {
         return {
             headers: {
@@ -62140,6 +62143,6 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"moment":185,"vue":284,"vue-hot-reload-api":258}]},{},[289]);
+},{"babel-runtime/core-js/object/keys":16,"moment":185,"vue":284,"vue-hot-reload-api":258}]},{},[289]);
 
 //# sourceMappingURL=app.js.map

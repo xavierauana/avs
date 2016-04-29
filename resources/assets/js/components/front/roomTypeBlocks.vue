@@ -49,13 +49,10 @@
                 console.log('fire event');
                 this.$dispatch('change-room-type', roomType);
             },
-            isTooMuch:function (description) {
-                if (this.propertyIsLoaded()) {
-                    var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
-                    if(numOfRow > 3 || description.length > 100){
-                        return true;
-                    }
-                    return false
+            isTooMuch: function (description) {
+                var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
+                if (numOfRow > 3 || description.length > 100) {
+                    return true;
                 }
                 return false
             }

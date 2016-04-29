@@ -20942,9 +20942,18 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _keys = require('babel-runtime/core-js/object/keys');
+
+var _keys2 = _interopRequireDefault(_keys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var moment = require('moment');
 
 exports.default = {
+    isObjectLoaded: function isObjectLoaded(object) {
+        return (0, _keys2.default)(object).length > 0;
+    },
     setAjaxHeaders: function setAjaxHeaders() {
         return {
             headers: {
@@ -21043,7 +21052,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"moment":13,"vue":50,"vue-hot-reload-api":24}],87:[function(require,module,exports){
+},{"babel-runtime/core-js/object/keys":1,"moment":13,"vue":50,"vue-hot-reload-api":24}],87:[function(require,module,exports){
 'use strict';
 
 var _frontEndFooter = require('./components/frontEndFooter.vue');

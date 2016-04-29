@@ -36,14 +36,11 @@
         },
         computed: {
             isTooMuch: function () {
-                if (this.propertyIsLoaded()) {
-                    var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
-                    if (numOfRow > 5 || this.descriptionHtml.length > 200) {
-                        return true;
-                    }
-                    return false
+                var numOfRow = (this.description.match(/<br\/>|<br \/>/g) || []).length;
+                if (numOfRow > 5 || this.description.length > 200) {
+                    return true;
                 }
-                return false;
+                return false
             }
         }
     }

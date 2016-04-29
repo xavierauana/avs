@@ -5,6 +5,9 @@
     var moment = require('moment');
 
     export default{
+        isObjectLoaded:function(object){
+            return Object.keys(object).length > 0;
+        },
         setAjaxHeaders:function(){
           return {
                 headers:{
