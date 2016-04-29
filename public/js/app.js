@@ -60486,7 +60486,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],297:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.coverDescription{\n    background-color: red;\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n")
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -60497,6 +60497,11 @@ exports.default = {
         description: {
             type: String
         }
+    },
+    data: function data() {
+        return {
+            wantTOShowMore: false
+        };
     },
     computed: {
         isTooMuch: function isTooMuch() {
@@ -60509,14 +60514,14 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    About Room\n    <div :class=\"{'coverDescription':isTooMuch}\" v-html=\"description\"></div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    About Room\n    <div :class=\"{'coverDescription':isTooMuch, 'showMore':wantToShowMore}\" v-html=\"description\"></div>\n    <div class=\"text-center\" @click=\"wantTOShowMore = true\" v-show=\"isTooMuch\"> Show More </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/detailComponents/propertyDescription.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\ndiv.coverDescription{\n    background-color: red;\n}\n"] = false
+    require("vueify-insert-css").cache["\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {

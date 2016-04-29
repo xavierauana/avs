@@ -1,12 +1,16 @@
 <style>
     div.coverDescription{
-        background-color: red;
+        height: 200px;
+    }
+    div.coverDescription.showMore{
+        height: auto;
     }
 </style>
 <template>
     <div class="description">
         About Room
-        <div :class="{'coverDescription':isTooMuch}" v-html="description"></div>
+        <div :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
+        <div class="text-center" @click="wantTOShowMore = true" v-show="isTooMuch"> Show More </div>
     </div>
 </template>
 
@@ -15,6 +19,11 @@
         props:{
             description:{
                 type: String
+            }
+        },
+        data:function(){
+            return {
+                wantTOShowMore:false
             }
         },
         computed:{
