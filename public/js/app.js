@@ -60486,6 +60486,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],297:[function(require,module,exports){
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.coverDescription{\n    background-color: red;\n}\n")
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -60496,22 +60497,35 @@ exports.default = {
         description: {
             type: String
         }
+    },
+    computed: {
+        isTooMuch: function isTooMuch() {
+            var numOfRow = (this.description.match(/<br\/>|<br \/>/g) || []).length;
+            if (numOfRow > 5 || this.description.length > 200) {
+                return true;
+            }
+            return false;
+        }
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    About Room\n    <div v-html=\"description\"></div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    About Room\n    <div :class=\"{'coverDescription':isTooMuch}\" v-html=\"description\"></div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/detailComponents/propertyDescription.vue"
+  module.hot.dispose(function () {
+    require("vueify-insert-css").cache["\ndiv.coverDescription{\n    background-color: red;\n}\n"] = false
+    document.head.removeChild(__vueify_style__)
+  })
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":284,"vue-hot-reload-api":258}],298:[function(require,module,exports){
+},{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],298:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
