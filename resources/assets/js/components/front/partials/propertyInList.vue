@@ -14,7 +14,7 @@
     <div class="col-xs-6 col-sm-4 col-md-3 property-card"
          @click.prevent="goToDetail">
         <img :src="getPropertyImage()" class="" alt="">
-        <p class="property-description">{{property.description}}</p>
+        <p class="property-description">{{getPropertyDescription()}}</p>
     </div>
 </template>
 
@@ -33,6 +33,12 @@
                 if(this.property.media.length > 0){
                     return this.property.media[0].link
                 }
+            },
+            getPropertyDescription: function () {
+                if(this.property.descriptionHtml.length > 100){
+                    return this.property.descriptionHtml.substr(0,100)
+                }
+                return this.property.descriptionHtml
             }
         }
     }
