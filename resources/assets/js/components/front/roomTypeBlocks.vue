@@ -11,7 +11,7 @@
 
                 <div
                         v-html="roomType.descriptionHtml"
-                        :class="{'coverDescription':isTooMuch}"></div>
+                        :class="{'coverDescription':isTooMuch(roomType.descriptionHtml)}"></div>
             </div>
             <div class="col-xs-2">
                 <button class="btn-default btn" @click.prevent="chooseRoomType(roomType)">Select
@@ -31,13 +31,7 @@
             }
         },
         computed:{
-            isTooMuch:function () {
-                var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
-                if(numOfRow > 3 || this.descriptionHtml.length > 100){
-                    return true;
-                }
-                return false
-            }
+
         },
         filters: {
             occupancyFilter: function (rooms) {
@@ -57,6 +51,13 @@
             chooseRoomType: function (roomType) {
                 console.log('fire event');
                 this.$dispatch('change-room-type', roomType);
+            },
+            isTooMuch:function (description) {
+                var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
+                if(numOfRow > 3 || description.length > 100){
+                    return true;
+                }
+                return false
             }
         }
     }

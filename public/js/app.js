@@ -61465,15 +61465,7 @@ exports.default = {
             type: Object
         }
     },
-    computed: {
-        isTooMuch: function isTooMuch() {
-            var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
-            if (numOfRow > 3 || this.descriptionHtml.length > 100) {
-                return true;
-            }
-            return false;
-        }
-    },
+    computed: {},
     filters: {
         occupancyFilter: function occupancyFilter(rooms) {
             if (this.isValid(rooms)) {
@@ -61492,11 +61484,18 @@ exports.default = {
         chooseRoomType: function chooseRoomType(roomType) {
             console.log('fire event');
             this.$dispatch('change-room-type', roomType);
+        },
+        isTooMuch: function isTooMuch(description) {
+            var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
+            if (numOfRow > 3 || description.length > 100) {
+                return true;
+            }
+            return false;
         }
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"roomTypes\">\n    <div class=\"row\" v-for=\"roomType in property.room_types | occupancyFilter \" style=\"margin-bottom:15px;margin-top:15px;\">\n        <div class=\"col-xs-2\">\n            <img :src=\"getRoomTypeFirstImage(roomType)\" style=\"max-height:100px\" class=\"img-responsive\">\n        </div>\n        <div class=\"col-xs-8\">\n            <h4>{{roomType.type.label}}</h4>\n\n            <div v-html=\"roomType.descriptionHtml\" :class=\"{'coverDescription':isTooMuch}\"></div>\n        </div>\n        <div class=\"col-xs-2\">\n            <button class=\"btn-default btn\" @click.prevent=\"chooseRoomType(roomType)\">Select\n            </button>\n        </div>\n    </div>\n</div>\n\n\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"roomTypes\">\n    <div class=\"row\" v-for=\"roomType in property.room_types | occupancyFilter \" style=\"margin-bottom:15px;margin-top:15px;\">\n        <div class=\"col-xs-2\">\n            <img :src=\"getRoomTypeFirstImage(roomType)\" style=\"max-height:100px\" class=\"img-responsive\">\n        </div>\n        <div class=\"col-xs-8\">\n            <h4>{{roomType.type.label}}</h4>\n\n            <div v-html=\"roomType.descriptionHtml\" :class=\"{'coverDescription':isTooMuch(roomType.descriptionHtml)}\"></div>\n        </div>\n        <div class=\"col-xs-2\">\n            <button class=\"btn-default btn\" @click.prevent=\"chooseRoomType(roomType)\">Select\n            </button>\n        </div>\n    </div>\n</div>\n\n\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
