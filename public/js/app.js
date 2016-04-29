@@ -61320,7 +61320,7 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"col-xs-6 col-sm-4 col-md-3 property-card\" @click.prevent=\"goToDetail\">\n    <img :src=\"getPropertyImage\" class=\"\" alt=\"\">\n    <p class=\"property-description\">{{property.description}}</p>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"col-xs-6 col-sm-4 col-md-3 property-card\" @click.prevent=\"goToDetail\">\n    <img :src=\"getPropertyImage()\" class=\"\" alt=\"\">\n    <p class=\"property-description\">{{property.description}}</p>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

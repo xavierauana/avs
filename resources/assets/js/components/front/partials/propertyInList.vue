@@ -13,7 +13,7 @@
 <template>
     <div class="col-xs-6 col-sm-4 col-md-3 property-card"
          @click.prevent="goToDetail">
-        <img :src="getPropertyImage" class="" alt="">
+        <img :src="getPropertyImage()" class="" alt="">
         <p class="property-description">{{property.description}}</p>
     </div>
 </template>
