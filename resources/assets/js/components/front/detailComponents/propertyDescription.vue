@@ -13,7 +13,7 @@
     <div class="description">
         About Room
         <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
-        <div class="text-center" @click="wantTOShowMore = true" v-show="isTooMuch"> Show More </div>
+        <button class="btn-xs btn-block btn-info" @click="wantToShowMore = true" v-show="isTooMuch"> Show More </button>
     </div>
 </template>
 
@@ -26,7 +26,7 @@
         },
         data:function(){
             return {
-                wantTOShowMore:false
+                wantToShowMore:false
             }
         },
         computed:{

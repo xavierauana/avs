@@ -60500,7 +60500,7 @@ exports.default = {
     },
     data: function data() {
         return {
-            wantTOShowMore: false
+            wantToShowMore: false
         };
     },
     computed: {
@@ -60514,7 +60514,7 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    About Room\n    <div class=\"propertyDescription\" :class=\"{'coverDescription':isTooMuch, 'showMore':wantToShowMore}\" v-html=\"description\"></div>\n    <div class=\"text-center\" @click=\"wantTOShowMore = true\" v-show=\"isTooMuch\"> Show More </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    About Room\n    <div class=\"propertyDescription\" :class=\"{'coverDescription':isTooMuch, 'showMore':wantToShowMore}\" v-html=\"description\"></div>\n    <button class=\"btn-xs btn-block btn-info\" @click=\"wantToShowMore = true\" v-show=\"isTooMuch\"> Show More </button>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
