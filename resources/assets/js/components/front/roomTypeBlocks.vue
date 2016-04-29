@@ -9,7 +9,9 @@
             <div class="col-xs-8">
                 <h4>{{roomType.type.label}}</h4>
 
-                <div>{{roomType.description}}</div>
+                <div
+                        v-html="roomType.descriptionHtml"
+                        :class="{'coverDescription':isTooMuch}"></div>
             </div>
             <div class="col-xs-2">
                 <button class="btn-default btn" @click.prevent="chooseRoomType(roomType)">Select
@@ -26,6 +28,15 @@
         props: {
             property: {
                 type: Object
+            }
+        },
+        computed:{
+            isTooMuch:function () {
+                var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
+                if(numOfRow > 3 || this.descriptionHtml.length > 100){
+                    return true;
+                }
+                return false
             }
         },
         filters: {
