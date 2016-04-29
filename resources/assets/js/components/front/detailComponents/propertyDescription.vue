@@ -13,7 +13,7 @@
     <div class="description">
         About Room
         <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
-        <button class="btn-xs btn-block btn-info" @click="wantToShowMore = true" v-show="isTooMuch"> Show More </button>
+        <button class=" btn btn-xs btn-block btn-info" @click="wantToShowMore = true" v-show="isTooMuch && !wantToShowMore"> Show More </button>
     </div>
 </template>
 
