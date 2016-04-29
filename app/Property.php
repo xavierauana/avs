@@ -15,9 +15,13 @@ class Property extends Model implements HasMediaResource
       'name', 'description', 'property_type_id', 'owner_id'
     ];
 
-    public function setDescriptionAttribute($value)
+    protected $appends = [
+      'descriptionHtml'
+    ];
+
+    public function getDescriptionHtmlAttribute($value)
     {
-        return $this->attributes['description'] = nl2br($value);
+        return nl2br($value);
     }
 
     public function propertyType()

@@ -149,7 +149,7 @@
                 return this.propertyIsLoaded()? this.property.amenities:[]
             },
             getPropertyDescription: function () {
-              return this.propertyIsLoaded()? this.property.description:"";
+              return this.propertyIsLoaded()? this.property.descriptionHtml:"";
             },
             getPropertyName:function () {
                 if(this.propertyIsLoaded()){

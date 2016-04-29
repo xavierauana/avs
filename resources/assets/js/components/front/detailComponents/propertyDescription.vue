@@ -11,7 +11,7 @@
 </style>
 <template>
     <div class="description">
-        About Room
+        <h3>About The Property</h3>
         <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
         <button class=" btn btn-xs btn-block btn-info" @click="wantToShowMore = true" v-show="isTooMuch && !wantToShowMore"> Show More </button>
     </div>

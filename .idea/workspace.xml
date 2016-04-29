@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66cec276-3a77-446f-ba03-c65b146e9b6b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Property.php" afterPath="$PROJECT_DIR$/app/Property.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js.map" afterPath="$PROJECT_DIR$/public/js/app.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue" />
     </list>
     <ignored path="avs.iws" />
@@ -46,21 +48,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+            <state relative-caret-position="558">
+              <caret line="151" column="75" selection-start-line="151" selection-start-column="75" selection-end-line="151" selection-end-column="75" />
+              <folding>
+                <element signature="e#2109#2155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="propertyDescription.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="propertyDescription.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue">
+      <file leaf-file-name="Property.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Property.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="104" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+            <state relative-caret-position="144">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -129,12 +143,12 @@
         <option value="$PROJECT_DIR$/resources/assets/js/components/indexPageAd1.vue" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/list.vue" />
-        <option value="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" />
         <option value="$PROJECT_DIR$/app/helpers/user.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Property.php" />
         <option value="$PROJECT_DIR$/app/RoomType.php" />
+        <option value="$PROJECT_DIR$/app/Property.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue" />
+        <option value="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" />
       </list>
     </option>
   </component>
@@ -292,12 +306,12 @@
       <workItem from="1461563329091" duration="2855000" />
       <workItem from="1461806224576" duration="993000" />
       <workItem from="1461824903992" duration="8000" />
-      <workItem from="1461897092603" duration="3607000" />
+      <workItem from="1461897092603" duration="4318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40465000" />
+    <option name="totallyTimeSpent" value="41176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -705,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Property.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="20" column="5" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -729,19 +735,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detail.vue">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+        <state relative-caret-position="299">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detailComponents/propertyDescription.vue">
+    <entry file="file://$PROJECT_DIR$/app/Property.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="104" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+        <state relative-caret-position="144">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="151" column="75" selection-start-line="151" selection-start-column="75" selection-end-line="151" selection-end-column="75" />
+          <folding>
+            <element signature="e#2109#2155#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
