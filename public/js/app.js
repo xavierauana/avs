@@ -61342,7 +61342,7 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"col-xs-6 col-sm-4 col-md-3 property-card\" @click.prevent=\"goToDetail\">\n    <img :src=\"getPropertyImage()\" class=\"\" alt=\"\">\n    <p class=\"property-description\" v-html=\"propertyDescription\"></p>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"col-xs-6 col-sm-4 col-md-3 property-card\" @click.prevent=\"goToDetail\">\n    <img :src=\"getPropertyImage()\" class=\"\" alt=\"\">\n    <p class=\"property-description\">{{property.name}}</p>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -61457,7 +61457,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"moment":185,"vue":284,"vue-hot-reload-api":258}],312:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.roomTypeDescription{\n    max-height: 150px;\n    overflow: hidden;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.roomTypeDescription{\n    max-height: 150px;\n    overflow: hidden;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n")
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -61505,7 +61505,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/roomTypeBlocks.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\ndiv.roomTypeDescription{\n    max-height: 150px;\n    overflow: hidden;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n"] = false
+    require("vueify-insert-css").cache["\ndiv.roomTypeDescription{\n    max-height: 150px;\n    overflow: hidden;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
