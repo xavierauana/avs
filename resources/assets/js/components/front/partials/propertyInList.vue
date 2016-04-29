@@ -13,7 +13,7 @@
 <template>
     <div class="col-xs-6 col-sm-4 col-md-3 property-card"
          @click.prevent="goToDetail">
-        <img :src="property.media[0].link" class="" alt="">
+        <img :src="getPropertyImage" class="" alt="">
         <p class="property-description">{{property.description}}</p>
     </div>
 </template>
@@ -28,6 +28,11 @@
         methods: {
             goToDetail: function () {
                 this.$dispatch('propertyClick', this.property)
+            },
+            getPropertyImage: function () {
+                if(this.property.media.length > 0){
+                    return this.property.media[0].link
+                }
             }
         }
     }
