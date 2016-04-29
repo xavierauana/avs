@@ -175,9 +175,13 @@ class PropertiesController extends Controller
                 $property = Property::findOrFail($request->get('propertyId'));
 
                 $fileName = $request->file('file')->getClientOriginalName();
-                $path = '/tests/files/';
+                
+                $mediaService = new MediaService();
+                $path = '/tests/files';
                 $absoluteLink = $path . $fileName;
-                $request->file('file')->move(public_path($path), $fileName);
+                $mediaService->prepare($request->file('file'))->saveImage(public_path($path), $fileName);
+
+//                $request->file('file')->move(public_path($path), $fileName);
                 $mediaParam = [
                     'link' => $absoluteLink,
                     'type' => 'image'

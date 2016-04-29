@@ -2,11 +2,12 @@
 
 namespace App;
 
+use App\Contracts\HasMediaResource;
 use App\RoomTypeCalendar;
 use App\Traits\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 
-class RoomType extends Model
+class RoomType extends Model implements HasMediaResource
 {
     use HasMedia;
 

@@ -19883,7 +19883,7 @@ exports.default = {
             }
         },
         delete: function _delete(media) {
-            this.$http.delete('/api/properties/' + this.property.id + '/deleteMedia/' + media.id + '/properties').then(function (response) {
+            this.$http.delete('/api/properties/' + this.property.id + '/deleteMedia/' + media.id).then(function (response) {
                 if (response.data.message == 'deleted') {
                     this.property.media.$remove(media);
                 }

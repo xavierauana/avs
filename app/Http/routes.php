@@ -96,18 +96,21 @@ Route::group(['middleware' => ['web']], function () {
         return response()->json($responseObject);
     });
     Route::get('/api/getMessages', function (Request $request) {
-        $messageRooms = Auth::user()->messageRooms()->orderBy('updated_at', 'desc')->with([
-            'messages'=>function($query){
-            $query->orderBy('updated_at', 'desc');
-        },'users'])->get();
+        if(Auth::user()){
+            $messageRooms = Auth::user()->messageRooms()->orderBy('updated_at', 'desc')->with([
+                'messages'=>function($query){
+                    $query->orderBy('updated_at', 'desc');
+                },'users'])->get();
 
 
-        $responseObject = new ajaxResponseDataObject();
-        $responseObject->code = "okay";
-        $responseObject->message = 'Getting Message Successful';
-        $responseObject->data = $messageRooms;
+            $responseObject = new ajaxResponseDataObject();
+            $responseObject->code = "okay";
+            $responseObject->message = 'Getting Message Successful';
+            $responseObject->data = $messageRooms;
 
-        return response()->json($responseObject);
+            return response()->json($responseObject);
+        }
+
     });
 
 
