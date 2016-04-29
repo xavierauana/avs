@@ -5,6 +5,7 @@
     }
 
     div.coverDescription {
+        position: relative;
         height: 200px;
         }
     div.coverDescription:after {
