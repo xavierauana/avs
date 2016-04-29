@@ -60486,7 +60486,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],297:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.propertyDescription{\n    overflow: hidden;\n}\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n")
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -60521,7 +60521,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/detailComponents/propertyDescription.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n"] = false
+    require("vueify-insert-css").cache["\ndiv.propertyDescription{\n    overflow: hidden;\n}\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
