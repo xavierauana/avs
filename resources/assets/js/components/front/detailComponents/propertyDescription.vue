@@ -13,7 +13,7 @@
         z-index: 10;
         display: block;
         position: absolute;
-        height: 100%;
+        height: 30%;
         top: 0;
         left: 0;
         right: 0;
