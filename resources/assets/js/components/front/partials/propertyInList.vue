@@ -1,11 +1,11 @@
 <style>
-    div.property-card{
+    div.property-card {
         margin-bottom: 15px;
         height: 200px;
         overflow: hidden;
     }
 
-    div.property-card img{
+    div.property-card img {
         width: 100%
     }
 
@@ -21,17 +21,16 @@
 <script>
     export default{
         props: {
-            property:{
-              type:Object
+            property: {
+                type: Object
             }
         },
-        computed:{
-            propertyDescription: function(){
+        computed: {
+            propertyDescription: function () {
                 var maxChar = 50;
-                if(this.property.descriptionHtml.length > maxChar){
-                    return this.property.descriptionHtml.substr(0,maxChar)
-                }
-                return this.property.descriptionHtml
+                return this.property.descriptionHtml.length > maxChar ?
+                        this.property.descriptionHtml.substr(0, maxChar) :
+                        this.property.descriptionHtml;
             }
         },
         methods: {
@@ -39,7 +38,7 @@
                 this.$dispatch('propertyClick', this.property)
             },
             getPropertyImage: function () {
-                if(this.property.media.length > 0){
+                if (this.property.media.length > 0) {
                     return this.property.media[0].link
                 }
             }

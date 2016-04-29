@@ -60486,7 +60486,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],297:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.propertyDescription {\n    overflow: hidden;\n\n}\n\ndiv.coverDescription {\n    position: relative;\n    height: 200px;\n    }\ndiv.coverDescription:after {\n    content: \" \";\n    z-index: 10;\n    display: block;\n    position: absolute;\n    height: 30%;\n    left: 0;\n    right: 0;\n    bottom:0;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n\ndiv.coverDescription.showMore {\n    height: auto;\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.propertyDescription {\n    overflow: hidden;\n\n}\n\ndiv.coverDescription {\n    position: relative;\n    height: 200px;\n    }\ndiv.coverDescription:after {\n    content: \" \";\n    z-index: 10;\n    display: block;\n    position: absolute;\n    height: 30%;\n    left: 0;\n    right: 0;\n    bottom:0;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n\ndiv.coverDescription.showMore {\n    height: auto;\n}\n")
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -60518,7 +60518,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/detailComponents/propertyDescription.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\ndiv.propertyDescription {\n    overflow: hidden;\n\n}\n\ndiv.coverDescription {\n    position: relative;\n    height: 200px;\n    }\ndiv.coverDescription:after {\n    content: \" \";\n    z-index: 10;\n    display: block;\n    position: absolute;\n    height: 30%;\n    left: 0;\n    right: 0;\n    bottom:0;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n\ndiv.coverDescription.showMore {\n    height: auto;\n}\n"] = false
+    require("vueify-insert-css").cache["\ndiv.propertyDescription {\n    overflow: hidden;\n\n}\n\ndiv.coverDescription {\n    position: relative;\n    height: 200px;\n    }\ndiv.coverDescription:after {\n    content: \" \";\n    z-index: 10;\n    display: block;\n    position: absolute;\n    height: 30%;\n    left: 0;\n    right: 0;\n    bottom:0;\n    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */\n    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */\n}\n\ndiv.coverDescription.showMore {\n    height: auto;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
@@ -61312,7 +61312,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"./../../modal.vue":320,"./../../signInModal.vue":323,"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],309:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.property-card{\n    margin-bottom: 15px;\n    height: 200px;\n    overflow: hidden;\n}\n\ndiv.property-card img{\n    width: 100%\n}\n\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.property-card {\n    margin-bottom: 15px;\n    height: 200px;\n    overflow: hidden;\n}\n\ndiv.property-card img {\n    width: 100%\n}\n\n")
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -61327,10 +61327,7 @@ exports.default = {
     computed: {
         propertyDescription: function propertyDescription() {
             var maxChar = 50;
-            if (this.property.descriptionHtml.length > maxChar) {
-                return this.property.descriptionHtml.substr(0, maxChar);
-            }
-            return this.property.descriptionHtml;
+            return this.property.descriptionHtml.length > maxChar ? this.property.descriptionHtml.substr(0, maxChar) : this.property.descriptionHtml;
         }
     },
     methods: {
@@ -61352,7 +61349,7 @@ if (module.hot) {(function () {  module.hot.accept()
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/partials/propertyInList.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\ndiv.property-card{\n    margin-bottom: 15px;\n    height: 200px;\n    overflow: hidden;\n}\n\ndiv.property-card img{\n    width: 100%\n}\n\n"] = false
+    require("vueify-insert-css").cache["\ndiv.property-card {\n    margin-bottom: 15px;\n    height: 200px;\n    overflow: hidden;\n}\n\ndiv.property-card img {\n    width: 100%\n}\n\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
