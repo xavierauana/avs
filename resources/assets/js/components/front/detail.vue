@@ -169,10 +169,10 @@
                 }
             },
             getOccupancy: function () {
-                return this.isSinglePropertyType() ? this.property.room_types[0].occupancy : ""
+                return this.isSinglePropertyType() ? parseInt(this.property.room_types[0].occupancy) : ""
             },
             getBeds: function () {
-                return this.isSinglePropertyType() ? this.property.room_types[0].beds : ""
+                return this.isSinglePropertyType() ? parseInt(this.property.room_types[0].beds) : ""
             },
             getPropertyType: function () {
                 return this.propertyIsLoaded() ? this.property.property_type.label : ""

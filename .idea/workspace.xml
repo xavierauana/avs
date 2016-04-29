@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66cec276-3a77-446f-ba03-c65b146e9b6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/front/list.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/front/list.vue" />
     </list>
     <ignored path="avs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,18 +48,40 @@
       <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+            <state relative-caret-position="466">
+              <caret line="193" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="208" selection-end-column="9" />
+              <folding>
+                <element signature="e#1358#1390#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="propertyInList.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detail.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="174" column="95" selection-start-line="174" selection-start-column="95" selection-end-line="174" selection-end-column="95" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="propertyInList.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state relative-caret-position="374">
+              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -105,8 +128,6 @@
         <option value="$PROJECT_DIR$/resources/assets/js/Store.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/frontPageTemplate.vue" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/indexPage.vue" />
-        <option value="$PROJECT_DIR$/resources/assets/js/components/front/list.vue" />
-        <option value="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" />
         <option value="$PROJECT_DIR$/resources/views/front/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/myReservation.vue" />
@@ -133,6 +154,8 @@
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/partials/carouselItem.vue" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/indexPageAd1.vue" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue" />
+        <option value="$PROJECT_DIR$/resources/assets/js/components/front/list.vue" />
+        <option value="$PROJECT_DIR$/resources/assets/js/components/front/detail.vue" />
       </list>
     </option>
   </component>
@@ -290,12 +313,12 @@
       <workItem from="1461563329091" duration="2855000" />
       <workItem from="1461806224576" duration="993000" />
       <workItem from="1461824903992" duration="8000" />
-      <workItem from="1461897092603" duration="241000" />
+      <workItem from="1461897092603" duration="572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37099000" />
+    <option name="totallyTimeSpent" value="37430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -379,13 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -519,13 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -691,13 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/components/properties/indexPage.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -712,18 +714,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/list.vue">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+        <state relative-caret-position="374">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/partials/propertyInList.vue">
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="684">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="193" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="208" selection-end-column="9" />
+          <folding>
+            <element signature="e#1358#1390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/components/front/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="174" column="95" selection-start-line="174" selection-start-column="95" selection-end-line="174" selection-end-column="95" />
           <folding />
         </state>
       </provider>

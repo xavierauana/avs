@@ -53,8 +53,8 @@
         route: {
             data: function (transition) {
                 swal({
-                    title:"",
-                    text:"Loading properties ...",
+                    title: "",
+                    text: "Loading properties ...",
                     showConfirmButton: false
                 });
                 this.authorization();
@@ -77,13 +77,13 @@
                 propertyTypes: [],
                 selectedPropertyType: {},
                 occupancy: this.$route.query.occupancy,
-                user:{},
+                user: {},
                 auth: false,
-                sliderPrices:{
-                    min:"",
-                    max:"",
-                    low:"",
-                    high:""
+                sliderPrices: {
+                    min: "",
+                    max: "",
+                    low: "",
+                    high: ""
                 }
             }
         },
@@ -98,20 +98,20 @@
         directives: {
             Date
         },
-        events:{
-            sliderStartChange: function(newValue){
+        events: {
+            sliderStartChange: function (newValue) {
                 this.sliderPrices.low = newValue;
             },
-            sliderEndChange: function(newValue){
+            sliderEndChange: function (newValue) {
                 this.sliderPrices.high = newValue;
             },
-            propertyClick:function(property){
+            propertyClick: function (property) {
                 this.goToDetail(property);
             },
-            topLevelUserUpdated:function(user){
+            topLevelUserUpdated: function (user) {
                 this.$set('user', user);
             },
-            topLevelAuthUpdated:function(auth){
+            topLevelAuthUpdated: function (auth) {
                 this.$set('auth', auth);
             }
         },
@@ -160,33 +160,33 @@
             }
         },
         methods: {
-            getMaxRoomPrice:function(){
+            getMaxRoomPrice: function () {
                 var maxPrice = 0;
-                this.properties.map(function(property){
-                    property.room_types.map(function(room){
-                        maxPrice = room.base_price > maxPrice? room.base_price : maxPrice;
+                this.properties.map(function (property) {
+                    property.room_types.map(function (room) {
+                        maxPrice = room.base_price > maxPrice ? room.base_price : maxPrice;
                     })
                 });
 
                 return maxPrice;
             },
-            getMinRoomPrice:function(){
+            getMinRoomPrice: function () {
                 var minPrice = 1000000;
-                this.properties.map(function(property){
-                    property.room_types.map(function(room){
-                        minPrice = room.base_price < minPrice? room.base_price : minPrice;
+                this.properties.map(function (property) {
+                    property.room_types.map(function (room) {
+                        minPrice = room.base_price < minPrice ? room.base_price : minPrice;
                     })
                 });
 
                 return minPrice;
             },
-            goToDetail:function(property){
-                var url = '/property/'+property.id;
-                if(typeof this.$route.query.checkIn != 'undefined' && typeof this.$route.query.checkOut != 'undefined'){
-                    url = url+ "?checkIn="+encodeURIComponent(this.$route.query.checkIn)+"&checkOut="+encodeURIComponent(this.$route.query.checkOut)
+            goToDetail: function (property) {
+                var url = '/property/' + property.id;
+                if (typeof this.$route.query.checkIn != 'undefined' && typeof this.$route.query.checkOut != 'undefined') {
+                    url = url + "?checkIn=" + encodeURIComponent(this.$route.query.checkIn) + "&checkOut=" + encodeURIComponent(this.$route.query.checkOut)
                 }
-                if(typeof this.$route.query.occupancy != 'undefined' ){
-                    url = url+ "&occupancy="+encodeURIComponent(this.$route.query.occupancy )
+                if (typeof this.$route.query.occupancy != 'undefined') {
+                    url = url + "&occupancy=" + encodeURIComponent(this.$route.query.occupancy)
                 }
                 this.$router.go(url);
             },

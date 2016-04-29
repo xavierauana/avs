@@ -60338,10 +60338,10 @@ exports.default = {
             }
         },
         getOccupancy: function getOccupancy() {
-            return this.isSinglePropertyType() ? this.property.room_types[0].occupancy : "";
+            return this.isSinglePropertyType() ? parseInt(this.property.room_types[0].occupancy) : "";
         },
         getBeds: function getBeds() {
-            return this.isSinglePropertyType() ? this.property.room_types[0].beds : "";
+            return this.isSinglePropertyType() ? parseInt(this.property.room_types[0].beds) : "";
         },
         getPropertyType: function getPropertyType() {
             return this.propertyIsLoaded() ? this.property.property_type.label : "";
