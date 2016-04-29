@@ -60506,10 +60506,7 @@ exports.default = {
     computed: {
         isTooMuch: function isTooMuch() {
             var numOfRow = (this.description.match(/<br\/>|<br \/>/g) || []).length;
-            if (numOfRow > 5 || this.description.length > 200) {
-                return true;
-            }
-            return false;
+            return numOfRow > 5 || this.description.length > 200;
         }
     }
 };
@@ -61454,6 +61451,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"moment":185,"vue":284,"vue-hot-reload-api":258}],312:[function(require,module,exports){
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.roomTypeDescription{\n    max-height: 150px;\n    overflow: hidden;\n}\n")
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -61494,19 +61492,23 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"roomTypes\">\n    <div class=\"row\" v-for=\"roomType in property.room_types | occupancyFilter \" style=\"margin-bottom:15px;margin-top:15px;\">\n        <div class=\"col-xs-2\">\n            <img :src=\"getRoomTypeFirstImage(roomType)\" style=\"max-height:100px\" class=\"img-responsive\">\n        </div>\n        <div class=\"col-xs-8\">\n            <h4>{{roomType.type.label}}</h4>\n\n            <div v-html=\"roomType.descriptionHtml\" :class=\"{'coverDescription':isTooMuch(roomType.descriptionHtml)}\"></div>\n        </div>\n        <div class=\"col-xs-2\">\n            <button class=\"btn-default btn\" @click.prevent=\"chooseRoomType(roomType)\">Select\n            </button>\n        </div>\n    </div>\n</div>\n\n\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"roomTypes\">\n    <div class=\"row\" v-for=\"roomType in property.room_types | occupancyFilter \" style=\"margin-bottom:15px;margin-top:15px;\">\n        <div class=\"col-xs-2\">\n            <img :src=\"getRoomTypeFirstImage(roomType)\" style=\"max-height:100px\" class=\"img-responsive\">\n        </div>\n        <div class=\"col-xs-8\">\n            <h4>{{roomType.type.label}}</h4>\n\n            <div class=\"roomTypeDescription\" v-html=\"roomType.descriptionHtml\" :class=\"{'coverDescription':isTooMuch(roomType.descriptionHtml)}\"></div>\n        </div>\n        <div class=\"col-xs-2\">\n            <button class=\"btn-default btn\" @click.prevent=\"chooseRoomType(roomType)\">Select\n            </button>\n        </div>\n    </div>\n</div>\n\n\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/roomTypeBlocks.vue"
+  module.hot.dispose(function () {
+    require("vueify-insert-css").cache["\ndiv.roomTypeDescription{\n    max-height: 150px;\n    overflow: hidden;\n}\n"] = false
+    document.head.removeChild(__vueify_style__)
+  })
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":284,"vue-hot-reload-api":258}],313:[function(require,module,exports){
+},{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],313:[function(require,module,exports){
 var __vueify_style__ = require("vueify-insert-css").insert("footer.container {\n  background-color: #800080;\n  color: white; }\n  footer.container a {\n    color: white; }\n  footer.container h5.title {\n    font-size: 1.2em;\n    display: inline-block;\n    border-bottom: solid 4px #9A907E; }\n  footer.container li {\n    font-size: 0.8em; }\n")
 "use strict";
 

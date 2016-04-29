@@ -37,10 +37,7 @@
         computed: {
             isTooMuch: function () {
                 var numOfRow = (this.description.match(/<br\/>|<br \/>/g) || []).length;
-                if (numOfRow > 5 || this.description.length > 200) {
-                    return true;
-                }
-                return false
+                return numOfRow > 5 || this.description.length > 200
             }
         }
     }

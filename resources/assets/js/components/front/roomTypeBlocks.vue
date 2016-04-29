@@ -1,4 +1,9 @@
-<style></style>
+<style>
+    div.roomTypeDescription{
+        max-height: 150px;
+        overflow: hidden;
+    }
+</style>
 <template>
     <div class="roomTypes">
         <div class="row" v-for="roomType in property.room_types | occupancyFilter "
@@ -10,6 +15,7 @@
                 <h4>{{roomType.type.label}}</h4>
 
                 <div
+                        class="roomTypeDescription"
                         v-html="roomType.descriptionHtml"
                         :class="{'coverDescription':isTooMuch(roomType.descriptionHtml)}"></div>
             </div>
