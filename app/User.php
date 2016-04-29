@@ -11,7 +11,7 @@ use Illuminate\Support\Collection;
 
 class User extends Authenticatable
 {
-    use ThrottlesLogins, HasMedia;
+    use ThrottlesLogins, HasMedia, PermissionRoleAuthenticationTrait;
 
     /**
      * The attributes that are mass assignable.
