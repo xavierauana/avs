@@ -19,9 +19,9 @@ class Property extends Model implements HasMediaResource
       'descriptionHtml'
     ];
 
-    public function getDescriptionHtmlAttribute($value)
+    public function getDescriptionHtmlAttribute()
     {
-        return nl2br($value);
+        return nl2br($this->description);
     }
 
     public function propertyType()
