@@ -21,8 +21,18 @@ class RoomType extends Model
         'description',
         'bedrooms',
         'beds',
-        'bathrooms',];
+        'bathrooms'
+    ];
 
+
+    protected $appends = [
+        'descriptionHtml'
+    ];
+
+    public function getDescriptionHtmlAttribute()
+    {
+        return nl2br($this->description);
+    }
 
 
     public function property()
