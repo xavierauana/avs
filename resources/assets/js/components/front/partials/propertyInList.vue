@@ -35,8 +35,9 @@
                 }
             },
             getPropertyDescription: function () {
-                if(this.property.descriptionHtml.length > 100){
-                    return this.property.descriptionHtml.substr(0,100)
+                var maxChar = 50;
+                if(this.property.descriptionHtml.length > maxChar){
+                    return this.property.descriptionHtml.substr(0,maxChar)
                 }
                 return this.property.descriptionHtml
             }
