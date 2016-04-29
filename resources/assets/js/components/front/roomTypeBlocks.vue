@@ -30,9 +30,6 @@
                 type: Object
             }
         },
-        computed:{
-
-        },
         filters: {
             occupancyFilter: function (rooms) {
                 if (this.isValid(rooms)) {
@@ -53,9 +50,12 @@
                 this.$dispatch('change-room-type', roomType);
             },
             isTooMuch:function (description) {
-                var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
-                if(numOfRow > 3 || description.length > 100){
-                    return true;
+                if (this.propertyIsLoaded()) {
+                    var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
+                    if(numOfRow > 3 || description.length > 100){
+                        return true;
+                    }
+                    return false
                 }
                 return false
             }

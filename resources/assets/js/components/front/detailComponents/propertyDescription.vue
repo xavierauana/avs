@@ -1,41 +1,49 @@
 <style>
-    div.propertyDescription{
+    div.propertyDescription {
         overflow: hidden;
     }
-    div.coverDescription{
+
+    div.coverDescription {
         height: 200px;
     }
-    div.coverDescription.showMore{
+
+    div.coverDescription.showMore {
         height: auto;
     }
 </style>
 <template>
     <div class="description">
         <h3>About The Property</h3>
-        <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}" v-html="description"></div>
-        <button class=" btn btn-xs btn-block btn-info" @click="wantToShowMore = true" v-show="isTooMuch && !wantToShowMore"> Show More </button>
+        <div class="propertyDescription" :class="{'coverDescription':isTooMuch, 'showMore':wantToShowMore}"
+             v-html="description"></div>
+        <button class=" btn btn-xs btn-block btn-info" @click="wantToShowMore = true"
+                v-show="isTooMuch && !wantToShowMore"> Show More
+        </button>
     </div>
 </template>
 
 <script>
     export default{
-        props:{
-            description:{
+        props: {
+            description: {
                 type: String
             }
         },
-        data:function(){
+        data: function () {
             return {
-                wantToShowMore:false
+                wantToShowMore: false
             }
         },
-        computed:{
-            isTooMuch:function () {
-                var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
-                if(numOfRow > 5 || this.descriptionHtml.length > 200){
-                    return true;
+        computed: {
+            isTooMuch: function () {
+                if (this.propertyIsLoaded()) {
+                    var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
+                    if (numOfRow > 5 || this.descriptionHtml.length > 200) {
+                        return true;
+                    }
+                    return false
                 }
-                return false
+                return false;
             }
         }
     }

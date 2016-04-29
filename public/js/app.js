@@ -60486,7 +60486,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":284,"vue-hot-reload-api":258,"vueify-insert-css":285}],297:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.propertyDescription{\n    overflow: hidden;\n}\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\ndiv.propertyDescription {\n    overflow: hidden;\n}\n\ndiv.coverDescription {\n    height: 200px;\n}\n\ndiv.coverDescription.showMore {\n    height: auto;\n}\n")
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -60505,23 +60505,26 @@ exports.default = {
     },
     computed: {
         isTooMuch: function isTooMuch() {
-            var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
-            if (numOfRow > 5 || this.descriptionHtml.length > 200) {
-                return true;
+            if (this.propertyIsLoaded()) {
+                var numOfRow = (this.descriptionHtml.match(/<br\/>|<br \/>/g) || []).length;
+                if (numOfRow > 5 || this.descriptionHtml.length > 200) {
+                    return true;
+                }
+                return false;
             }
             return false;
         }
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    <h3>About The Property</h3>\n    <div class=\"propertyDescription\" :class=\"{'coverDescription':isTooMuch, 'showMore':wantToShowMore}\" v-html=\"description\"></div>\n    <button class=\" btn btn-xs btn-block btn-info\" @click=\"wantToShowMore = true\" v-show=\"isTooMuch &amp;&amp; !wantToShowMore\"> Show More </button>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"description\">\n    <h3>About The Property</h3>\n    <div class=\"propertyDescription\" :class=\"{'coverDescription':isTooMuch, 'showMore':wantToShowMore}\" v-html=\"description\"></div>\n    <button class=\" btn btn-xs btn-block btn-info\" @click=\"wantToShowMore = true\" v-show=\"isTooMuch &amp;&amp; !wantToShowMore\"> Show More\n    </button>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/adrianexavier/Code/avs/resources/assets/js/components/front/detailComponents/propertyDescription.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\ndiv.propertyDescription{\n    overflow: hidden;\n}\ndiv.coverDescription{\n    height: 200px;\n}\ndiv.coverDescription.showMore{\n    height: auto;\n}\n"] = false
+    require("vueify-insert-css").cache["\ndiv.propertyDescription {\n    overflow: hidden;\n}\n\ndiv.coverDescription {\n    height: 200px;\n}\n\ndiv.coverDescription.showMore {\n    height: auto;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
@@ -61465,7 +61468,6 @@ exports.default = {
             type: Object
         }
     },
-    computed: {},
     filters: {
         occupancyFilter: function occupancyFilter(rooms) {
             if (this.isValid(rooms)) {
@@ -61486,9 +61488,12 @@ exports.default = {
             this.$dispatch('change-room-type', roomType);
         },
         isTooMuch: function isTooMuch(description) {
-            var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
-            if (numOfRow > 3 || description.length > 100) {
-                return true;
+            if (this.propertyIsLoaded()) {
+                var numOfRow = (description.match(/<br\/>|<br \/>/g) || []).length;
+                if (numOfRow > 3 || description.length > 100) {
+                    return true;
+                }
+                return false;
             }
             return false;
         }
